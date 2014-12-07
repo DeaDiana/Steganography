@@ -7,6 +7,7 @@
 enum ArgumentsFlags { 
 	FILE_FLAG, 
 	MASK_FLAG,
+	LNGMSG_FLAG,
 	HELP_FLAG
 };
 
