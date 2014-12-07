@@ -27,6 +27,13 @@ std::map <ArgumentsFlags, std::string> parseCommandLineIntoTheMapOfParameters(in
 				} else {
 					throw ParseCmdLineException("\nAfter -m flag should be pointed bool mask.");
 				}
+			case 'l':
+				if ((i + 1) < argc) {
+					set_of_parameters[LNGMSG_FLAG] = argv[++i];
+					break;
+				} else {
+					throw ParseCmdLineException("\nAfter -m flag should be pointed bool mask.");
+				}
 			case 'h':
 				set_of_parameters[HELP_FLAG] = "";
 				break;
@@ -38,7 +45,7 @@ std::map <ArgumentsFlags, std::string> parseCommandLineIntoTheMapOfParameters(in
 			break;
 		}
 	}
-		return set_of_parameters;
+return set_of_parameters;
 }
 
 // extractOneParameter is necessary for picking up the parameter, which contains space: -f Test 1.tst
